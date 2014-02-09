@@ -18,6 +18,10 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+/**
+ * @author Shawn P Neuman
+ *
+ */
 public class MainActivity extends Activity implements OnClickListener {
 
 	private RelativeLayout rl;
@@ -122,7 +126,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private void removeButtons() {
 
 		for (int i = 0; i < buttonList.size(); i++) {
-			Button b = (Button) buttonList.get(i);
+			Button b = buttonList.get(i);
 			((ViewGroup) b.getParent()).removeView(b);
 		}
 		buttonList.clear();
@@ -139,7 +143,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			startButton.setVisibility(View.VISIBLE);
 			for (int i = 0; i < buttonList.size(); i++) {
 
-				Button b = (Button) buttonList.get(i);
+				Button b = buttonList.get(i);
 				b.setVisibility(View.VISIBLE);
 
 			}
@@ -148,7 +152,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			et1.setVisibility(View.INVISIBLE);
 			startButton.setVisibility(View.INVISIBLE);
 			for (int i = 0; i < buttonList.size(); i++) {
-				Button b = (Button) buttonList.get(i);
+				Button b = buttonList.get(i);
 				if (!(b.getId() == 1)) {
 					b.setVisibility(View.INVISIBLE);
 				}
@@ -173,7 +177,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			et1.setLayoutParams(etLP);
 			startButton.setLayoutParams(sbLP);
 			for (int i = 0; i < buttonList.size(); i++) {
-				Button b = (Button) buttonList.get(i);
+				Button b = buttonList.get(i);
 				LayoutParams btScram = new LayoutParams(250, 120);
 				btScram.topMargin = 420 + (180 * i);
 				btScram.leftMargin = ((width / 2) - 125);
@@ -198,7 +202,7 @@ public class MainActivity extends Activity implements OnClickListener {
 			startButton.setLayoutParams(sbScram);
 			
 			for (int i = 0; i < buttonList.size(); i++) {
-				Button b = (Button) buttonList.get(i);
+				Button b = buttonList.get(i);
 				LayoutParams btScram = new LayoutParams(250, 120);
 				btScram.topMargin = 420 + (180 * i);
 				btScram.leftMargin = genNumber();
